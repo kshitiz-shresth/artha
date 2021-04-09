@@ -1,0 +1,28 @@
+.footer {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: $color-primary;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &--main {
+      position: relative;
+
+      &::before {
+        content: '|';
+
+        top: 50%;
+        right: -1.2rem;
+        position: absolute;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

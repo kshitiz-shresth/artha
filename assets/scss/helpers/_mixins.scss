@@ -1,0 +1,27 @@
+@mixin flexAlignC {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexAlignCJustifyB {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexAlignCjustifyC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin media($breaking-point) {
+  @media (max-width: $breaking-point) {
+    @content;
+  }
+}
+
+@mixin min-media($breaking-point) {
+  @media (min-width: $breaking-point) {
+    @content;
+  }
+}

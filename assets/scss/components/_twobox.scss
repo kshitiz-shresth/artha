@@ -1,0 +1,8 @@
+.two-box {
+  @include flexAlignC;
+  @include flexAlignCJustifyB;
+
+  & > * {
+    flex-basis: 48%;
+  }
+}

@@ -1,0 +1,145 @@
+.header {
+  &__top {
+    background-color: $color-primary;
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0.7rem 5rem;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > svg {
+        margin-right: 0.8rem;
+      }
+      a {
+        font-size: 1.1rem;
+        color: $color-white;
+        font-weight: normal;
+        letter-spacing: 0.1rem;
+
+        text-transform: uppercase;
+
+        transition: all 0.2s;
+
+        &:hover {
+          color: $color-secondary;
+
+          transition: all 0.2s;
+        }
+      }
+
+      &.social-box {
+        a {
+          &:not(:last-child) {
+            margin-right: 2.4rem;
+          }
+          svg path {
+            transition: all 0.2s;
+          }
+
+          &:hover {
+            svg path {
+              fill: $color-secondary;
+
+              transition: all 0.2s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__logo {
+      font-weight: 600;
+      font-size: 3.6rem;
+      color: $color-primary;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 6rem;
+      }
+    }
+
+    &__link {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: $color-primary;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .hero {
+    .container {
+      @include flexAlignC();
+      @include flexAlignCJustifyB();
+
+      & > div {
+        flex-basis: 48%;
+      }
+    }
+
+    &__content {
+      max-width: 48.8rem;
+      margin-left: calc(48% - 48.8rem);
+
+      &__top {
+        flex-basis: 100%;
+
+        padding-left: 4.2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1.2rem;
+
+        &::before {
+          content: '';
+
+          left: 0;
+          bottom: 0;
+          width: 9rem;
+          height: 0.1rem;
+          position: absolute;
+          background-color: $color-primary;
+        }
+      }
+
+      &__main {
+        padding-left: 4rem;
+
+        .paragraph {
+          margin: 1.4rem 0 2.7rem 0;
+        }
+      }
+
+      &__side {
+        left: 0.5rem;
+        top: 100%;
+
+        transform-origin: left;
+        transform: translateY(-100%) rotate(270deg);
+      }
+    }
+
+    &__image {
+      img {
+        vertical-align: bottom;
+      }
+    }
+  }
+}

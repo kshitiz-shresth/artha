@@ -1,0 +1,69 @@
+@mixin commonButtonProperty {
+  padding: 1rem 1.8rem;
+
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.button {
+  &--primary {
+    @include commonButtonProperty();
+
+    color: $color-white;
+    text-transform: uppercase;
+
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      color: $color-primary;
+
+      background-color: $color-white;
+    }
+  }
+
+  &__info {
+    color: $color-text;
+    font-size: 1.2rem;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  &--light {
+    @include commonButtonProperty();
+
+    color: $color-primary;
+
+    background-color: $color-white;
+    border: 2px solid $color-white;
+
+    &:hover {
+      color: $color-white;
+
+      background-color: $color-primary;
+
+      .button__info {
+        color: $color-text-light;
+
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+  &--small {
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: $color-white;
+
+    padding: 0.8rem;
+
+    background-color: $color-primary;
+  }
+}

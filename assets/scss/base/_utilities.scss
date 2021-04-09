@@ -1,0 +1,135 @@
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-white {
+  color: $color-white !important;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.gutterX {
+  padding-left: $gutterX;
+  padding-right: $gutterX;
+}
+
+.gutterY {
+  padding-top: $gutterY;
+  &--bottom {
+    padding-bottom: $gutterY;
+  }
+  &--md {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  &--sm {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  &--no-bottom {
+    padding-bottom: 0;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.big-mar-bt {
+  margin-bottom: 7rem;
+}
+
+.mid-mar-bt {
+  margin-bottom: 4rem;
+}
+
+.mid-mar-tp {
+  margin-top: 4rem;
+}
+
+.sm-mar-bt {
+  margin-bottom: 3rem;
+}
+
+.sm-mar-tp {
+  margin-top: 3rem;
+}
+
+.bg-primary {
+  background-color: $color-primary;
+}
+
+.bg-secondary {
+  background-color: $color-secondary;
+}
+
+.bg-white-dim {
+  background-color: #fafafa;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.bg-dim {
+  background-color: #f8f9fa;
+}
