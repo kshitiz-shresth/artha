@@ -14,6 +14,13 @@
     &--main {
       position: relative;
 
+      @include media($breaking-point-3) {
+        display: block;
+        &::before {
+          display: none;
+        }
+      }
+
       &::before {
         content: '|';
 

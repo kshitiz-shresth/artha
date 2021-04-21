@@ -2,7 +2,19 @@
   @include flexAlignC;
   @include flexAlignCJustifyB;
 
+  @include media($breaking-point-2) {
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   & > * {
     flex-basis: 48%;
+
+    @include media($breaking-point-2) {
+      &:first-child {
+        margin-bottom: 3rem;
+      }
+    }
   }
 }

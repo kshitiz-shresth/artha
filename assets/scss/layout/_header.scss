@@ -75,6 +75,10 @@
       &:not(:last-child) {
         margin-right: 6rem;
       }
+
+      @include media($breaking-point-2) {
+        display: none;
+      }
     }
 
     &__link {
@@ -91,8 +95,18 @@
       @include flexAlignC();
       @include flexAlignCJustifyB();
 
+      @include media($breaking-point-1) {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
       & > div {
         flex-basis: 48%;
+
+        @include media($breaking-point-2) {
+          flex-basis: 100%;
+        }
       }
     }
 
@@ -100,12 +114,20 @@
       max-width: 48.8rem;
       margin-left: calc(48% - 48.8rem);
 
+      @include media($breaking-point-1) {
+        margin: 3rem auto 5rem 0;
+      }
+
       &__top {
         flex-basis: 100%;
 
         padding-left: 4.2rem;
         padding-bottom: 1rem;
         margin-bottom: 1.2rem;
+
+        @include media($breaking-point-3) {
+          padding-left: 0;
+        }
 
         &::before {
           content: '';
@@ -122,6 +144,10 @@
       &__main {
         padding-left: 4rem;
 
+        @include media($breaking-point-3) {
+          padding-left: 0;
+        }
+
         .paragraph {
           margin: 1.4rem 0 2.7rem 0;
         }
@@ -133,12 +159,35 @@
 
         transform-origin: left;
         transform: translateY(-100%) rotate(270deg);
+
+        @include media($breaking-point-3) {
+          top: 0;
+          left: 0;
+          position: relative !important;
+
+          margin-bottom: 2rem;
+
+          transform: translateY(00) rotate(0deg);
+        }
       }
     }
 
+    &__btn {
+      display: inline-block;
+    }
+
     &__image {
+      @include media($breaking-point-1) {
+        order: -1;
+        width: 100%;
+      }
       img {
         vertical-align: bottom;
+
+        @include media($breaking-point-1) {
+          height: 50rem;
+          object-fit: cover;
+        }
       }
     }
   }
