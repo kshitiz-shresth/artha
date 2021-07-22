@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckboxController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.index');
 });
+
+Route::post('update-checkbox',[CheckboxController::class,'update']);
 
 
 Route::group(['prefix' => 'admin'], function () {

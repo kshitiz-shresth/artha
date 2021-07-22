@@ -26,7 +26,7 @@
                 fill="white"
               />
             </svg>
-            <a href="">+977 123 456 789</a>
+            <a href="">{{ setting('site.contact_number') }}</a>
           </li>
           <li class="header__top__item">
             <svg
@@ -43,10 +43,11 @@
                 fill="white"
               />
             </svg>
-            <a href="">exampleemail@email.com</a>
+            <a href="">{{ setting('site.email') }}</a>
           </li>
           <li class="header__top__item social-box">
-            <a href="">
+            @if(setting('site.facebook_link'))
+            <a href="{{ setting('site.facebook_link') }}">
               <svg
                 width="15"
                 height="15"
@@ -62,7 +63,9 @@
                 />
               </svg>
             </a>
-            <a href="">
+            @endif
+            @if(setting('site.instagram_link'))
+            <a href="{{ setting('site.instagram_link') }}">
               <svg
                 width="15"
                 height="15"
@@ -76,6 +79,7 @@
                 />
               </svg>
             </a>
+            @endif
           </li>
         </ul>
       </nav>
